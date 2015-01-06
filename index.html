@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>IPython and the IPython Family</title>
+<meta name="author" content="(Christopher Kotfila)"/>
+
+<link rel="stylesheet" href="./reveal.js/css/reveal.min.css"/>
+<link rel="stylesheet" href="./reveal.js/css/theme/beige.css" id="theme"/>
+<link rel="stylesheet" href="styles.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section>
+<h2 class='title'>IPython and the IPython Family</h2><p>Christopher Kotfila <br/> INF Brown Bag- Spring 2015 <br/> <a href="mailto:ckotfila@albany.edu">ckotfila@albany.edu</a></p></section>
+
+<section>
+<section id="sec-1" >
+
+<h2>Objectives</h2>
+</section>
+<section id="sec-1-1" >
+
+<h3>Outline</h3>
+<ul class="org-ul">
+<li>Goals and Motivation
+</li>
+<li>What is Python and why should I care?
+</li>
+<li>What is IPython? and what is it becoming?
+</li>
+<li>IPython for Teaching
+</li>
+<li>IPython for Research
+</li>
+</ul>
+
+<aside class="notes">
+<p>
+Start with Goals and Motivation - tool talk,  not a research talk
+</p>
+
+<p>
+Incrementally zoom in on IPython  - start with Python
+</p>
+
+<p>
+contextualize IPython -  historically,  currently,  in the future
+</p>
+
+<p>
+pedagological impacts IPython could have for the INF undergraduates
+</p>
+
+<p>
+Using IPython to do reserach
+</p>
+</aside>
+</section>
+<section id="sec-1-2" >
+
+<h3>Disclosure</h3>
+<p class="fragment roll-in">
+Not currently an instructor!
+</p>
+<p class="fragment roll-in">
+Arguably not currently a researcher!
+</p>
+<aside class="notes">
+<p>
+Ideally talk about IPython for better petagogy and research
+Disclose first:
+</p>
+
+<p>
+In academic context
+Never taught computer science,  Only taught basic computer skills
+</p>
+
+<p>
+Arguably not currently a reserach -
+never won a grant
+never published work based on a personal research agenda
+</p>
+
+<p>
+Dispite these
+</p>
+</aside>
+
+</section>
+<section id="sec-1-3" >
+
+<h3>Trust me,  I'm an Engineer</h3>
+<img src="./img/trust-me-im-an-engineer.jpg" alt="trust-me-im-an-engineer.jpg" />
+
+</section>
+<section id="sec-1-4" >
+
+<h3>Goals</h3>
+<p class="fragment roll-in">
+Talk about the petagological impact of these tools
+</p>
+
+<p class="fragment roll-in">
+Encourage you to invest in learing these tools
+</p>
+
+<p class="fragment roll-in">
+Hopefully at least one "Thats really cool."
+</p>
+
+<p class="fragment roll-in">
+Evangelism
+</p>
+</section>
+
+</section>
+<section>
+<section id="sec-2" >
+
+<h2>What is Python and why should I care?</h2>
+</section>
+<section id="sec-2-1" >
+
+<h3>History</h3>
+</section>
+<section id="sec-2-2" >
+
+<h3>The Python Community</h3>
+</section>
+<section id="sec-2-3" >
+
+<h3>Compiled vs. Interpreted</h3>
+</section>
+<section id="sec-2-4" >
+
+<h3>The Python REPL</h3>
+<ul class="org-ul">
+<li><b>R</b> ead
+</li>
+<li><b>E</b> valuate
+</li>
+<li><b>P</b> rint
+</li>
+<li><b>L</b> oop
+</li>
+</ul>
+</section>
+
+</section>
+<section>
+<section id="sec-3" >
+
+<h2>What is IPython? and what is it becoming?</h2>
+</section>
+<section id="sec-3-1" >
+
+<h3>History</h3>
+</section>
+<section id="sec-3-2" >
+
+<h3>IPython Notebook</h3>
+<p>
+JSON notebooks are 
+</p>
+</section>
+<section id="sec-3-3" >
+
+<h3>Problems with the Notebook</h3>
+</section>
+<section id="sec-3-4" >
+
+<h3>Jupyter Project</h3>
+</section>
+
+</section>
+<section>
+<section id="sec-4" >
+
+<h2>IPython for Teaching</h2>
+</section>
+<section id="sec-4-1" >
+
+<h3>Literate Programming</h3>
+<ul class="org-ul">
+<li>Donald Knuth Quotes
+</li>
+<li>Markdown &amp; Code together
+</li>
+</ul>
+
+</section>
+<section id="sec-4-2" >
+
+<h3>NBViewer</h3>
+<p>
+An <a href="https://github.com/kotfic/PNAS_hurricanes">example</a> using <a href="http://nbviewer.ipython.org/">nbviewer</a> 
+</p>
+
+</section>
+<section id="sec-4-3" >
+
+<h3>Blogging, Tutorials and Books</h3>
+<ul class="org-ul">
+<li><a href="http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/">Frequentism and Bayesianism: A Practical&#x2026;</a> (<a href="https://github.com/jakevdp/PythonicPerambulations/blob/master/content/downloads/notebooks/FreqBayes.ipynb">Notebook</a>)
+</li>
+<li><a href="http://bugra.github.io/work/notes/2014-11-24/trend-estimation-via-hodrick-prescott-filter/">Trend Estimation via Hodrick Prescott Filter</a>
+</li>
+<li><a href="https://github.com/ogrisel/parallel_ml_tutorial">Parallel ML Tutorial</a> (<a href="http://nbviewer.ipython.org/github/ogrisel/parallel_ml_tutorial/tree/master/rendered_notebooks/">Notebooks</a>)
+</li>
+<li><a href="https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition">Mining the Social Web 2nd Edition</a> (<a href="http://nbviewer.ipython.org/github/ptwobrussell/Mining-the-Social-Web-2nd-Edition/tree/master/ipynb/">Notebooks</a>)
+</li>
+</ul>
+
+<aside class="notes">
+<p>
+Many resources available - 
+</p>
+
+<p>
+Jake VanderPlas - Director of Research in the Physical Sciences for University of Washington's eScience institute
+Bugra Akyildiz - Data scientist at Axial in Brooklyn
+Olivier Grisel - French contributor to sklearn
+Matthew A. Russell - CTO Digital Reasoning ("cognitive computing")
+</p>
+</aside>
+
+</section>
+<section id="sec-4-4" >
+
+<h3>Widgets &amp; Simulation</h3>
+<p>
+<a href="http://localhost:8888/notebooks/Univariate%20Regression.ipynb">Univariate Regression</a>
+<a href="http://localhost:8888/notebooks/Sigmoid%20Example.ipynb">Sigmoid Function</a>
+<a href="http://localhost:8888/notebooks/Gradient%20Descent.ipynb">Gradient Descent</a>
+</p>
+</section>
+
+</section>
+<section>
+<section id="sec-5" >
+
+<h2>IPython for Reserach</h2>
+</section>
+
+</section>
+<section>
+<section id="sec-6" >
+
+<h2>Examples</h2>
+</section>
+</section>
+</div>
+</div>
+
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.min.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: true,
+center: true,
+slideNumber: true,
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+]
+});
+</script>
+</body>
+</html>
