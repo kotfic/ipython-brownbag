@@ -19,12 +19,14 @@
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     }
 </script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
 <div class="reveal">
 <div class="slides">
 <section>
 <h2 class='title'>IPython and the IPython Family</h2><p>Christopher Kotfila <br/> INF Brown Bag- Spring 2015 <br/> <a href="mailto:ckotfila@albany.edu">ckotfila@albany.edu</a></p></section>
+
 
 <section>
 <section id="sec-1" >
@@ -135,17 +137,80 @@ Evangelism
 </section>
 <section id="sec-2-1" >
 
-<h3>History</h3>
+<h3>What <i>is</i> a programming language?</h3>
 </section>
 <section id="sec-2-2" >
 
-<h3>The Python Community</h3>
+<h3>Compiled vs. Interpreted</h3>
 </section>
 <section id="sec-2-3" >
 
-<h3>Compiled vs. Interpreted</h3>
+<h3>English</h3>
+<pre><code class="hljs text" trim-data>
+Computer programming (often shortened to programming) is a process that 
+leads from an original formulation of a computing problem to executable 
+computer programs. Programming involves activities such as analysis, 
+developing understanding, generating algorithms, verification of 
+requirements of algorithms including their correctness and resource 
+consumption, and implementation (commonly referred to as coding) of 
+algorithms in a target programming language.
+
+</code></pre>
+<div class='footnote'>
+<a href="http://en.wikipedia.org/wiki/Computer_programming">http://en.wikipedia.org/wiki/Computer_programming</a>
+</div>
 </section>
 <section id="sec-2-4" >
+
+<h3>Code</h3>
+<pre><code class="hljs text" trim-data>
+@task
+def launch_engines(n=4):
+    env['pwd'] = os.getcwd()
+    env['n'] = n
+
+    with cd(env['pwd']):
+        run('echo "' + sbatch_script.format(**env) 
+            + '" > /tmp/ipengines_{user}.sh'.format(**env))
+        env['job_id'] = parse_job_id(
+            run("sbatch /tmp/ipengines_{user}.sh".format(**env)))
+        
+        with open(".job_id", "w") as fh:
+            fh.write(json.dumps(env))
+
+</code></pre>
+
+</section>
+<section id="sec-2-5" >
+
+<h3>Machine Code</h3>
+<pre><code class="hljs text" trim-data>
+^W ^@h^C^@^@^@&lt;E9&gt;&lt;B0&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;%^B^W ^@h^D^@^@^@&lt;E9&gt;&lt;A0&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;
+&lt;FF&gt;%&lt;FA&gt;^V ^@h^E^@^@^@&lt;E9&gt;&lt;90&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;%&lt;F2&gt;^V ^@h^F^@^@^@&lt;E9&gt;&lt;80&gt;
+&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;%&lt;EA&gt;^V ^@h^G^@^@^@&lt;E9&gt;p&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;%&lt;E2&gt;^V ^@^@^@^@
+&lt;E9&gt;`&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;%&lt;DA&gt;^V ^@h   ^@^@^@&lt;E9&gt;P&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;AWAVAUATI&lt;89&gt;
+&lt;F5&gt;US&lt;8D&gt;_^AHc&lt;DB&gt;H&lt;83&gt;&lt;EC&gt;^XH&lt;C1&gt;&lt;E3&gt;^C&lt;89&gt;|$^DH&lt;89&gt;&lt;DF&gt;&lt;E8&gt;I&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;H&lt;89&gt;
+&lt;DF&gt;H&lt;89&gt;&lt;C5&gt;&lt;E8&gt;&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;H&lt;85&gt;&lt;C0&gt;H&lt;89&gt;&lt;C3&gt;^O&lt;84&gt;&lt;BC&gt;^@^@^@H&lt;85&gt;&lt;ED&gt;^O
+&lt;84&gt;&lt;B3&gt;^@^@^@1&lt;F6&gt;&lt;BF&gt;^F^@^@^@&lt;E8&gt;m&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;H&lt;89&gt;&lt;C7&gt;&lt;E8&gt;U&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;H&lt;85&gt;
+&lt;C0&gt;H&lt;89&gt;D^O&lt;84&gt;&lt;91&gt;^@^@^@H&lt;8D&gt;5^B^C^@^@&lt;BF&gt;^F^@^@^@&lt;E8&gt;F&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;&lt;8B&gt;D$^D
+&lt;85&gt;&lt;C0&gt;^O&lt;8E&gt;^T^A^@^@D&lt;8D&gt;`&lt;FF&gt;E1&lt;FF&gt;I&lt;83&gt;&lt;C4&gt;^A&lt;EB&gt;^R^O^_D^@^@J&lt;89&gt;^D&lt;FB&gt;I&lt;83&gt;
+&lt;C7&gt;^AM9&lt;E7&gt;t|K&lt;8B&gt;|&lt;FD&gt;^@1&lt;F6&gt;&lt;E8&gt;^_&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;H&lt;85&gt;&lt;C0&gt;J&lt;89&gt;D&lt;FD&gt;^@u&lt;DD&gt;H
+&lt;8B&gt;|&lt;E8&gt;&lt;DB&gt;&lt;FE&gt;&lt;FF&gt;&lt;FF&gt;H&lt;8B&gt;^E&lt;9C&gt;^U ^@A&lt;8D&gt;O^AH&lt;8D&gt;^U&lt;A1&gt;^B^@^@&lt;BE&gt;^A^@^@^@H
+&lt;8B&gt;81&lt;C0&gt;&lt;E8&gt;
+
+</code></pre>
+
+</section>
+<section id="sec-2-6" >
+
+<h3>So why should I care?</h3>
+</section>
+<section id="sec-2-7" >
+
+<h3>The Python Community</h3>
+
+</section>
+<section id="sec-2-8" >
 
 <h3>The Python REPL</h3>
 <ul class="org-ul">
@@ -173,9 +238,14 @@ Evangelism
 <section id="sec-3-2" >
 
 <h3>IPython Notebook</h3>
-<p>
-JSON notebooks are 
-</p>
+<ul class="org-ul">
+<li>notebooks are just JSON files
+</li>
+<li>can be version controlled
+</li>
+</ul>
+
+
 </section>
 <section id="sec-3-3" >
 
@@ -194,6 +264,17 @@ JSON notebooks are
 </section>
 <section id="sec-4-1" >
 
+<h3>Direct impact</h3>
+<ul class="org-ul">
+<li>Student: Only need a browser and an internet connection
+</li>
+<li>Instructor:  Only need to setup/install a single instance
+</li>
+</ul>
+
+</section>
+<section id="sec-4-2" >
+
 <h3>Literate Programming</h3>
 <ul class="org-ul">
 <li>Donald Knuth Quotes
@@ -203,7 +284,7 @@ JSON notebooks are
 </ul>
 
 </section>
-<section id="sec-4-2" >
+<section id="sec-4-3" >
 
 <h3>NBViewer</h3>
 <p>
@@ -211,7 +292,7 @@ An <a href="https://github.com/kotfic/PNAS_hurricanes">example</a> using <a href
 </p>
 
 </section>
-<section id="sec-4-3" >
+<section id="sec-4-4" >
 
 <h3>Blogging, Tutorials and Books</h3>
 <ul class="org-ul">
@@ -239,28 +320,37 @@ Matthew A. Russell - CTO Digital Reasoning ("cognitive computing")
 </aside>
 
 </section>
-<section id="sec-4-4" >
+<section id="sec-4-5" >
 
 <h3>Widgets &amp; Simulation</h3>
+<ul class="org-ul">
+<li><a href="http://localhost:8888/notebooks/Sigmoid%20Example.ipynb">Sigmoid Function</a> 
+</li>
+<li><a href="http://localhost:8888/notebooks/Univariate%20Regression.ipynb">Univariate Regression</a>
+</li>
+<li><a href="http://localhost:8888/notebooks/Gradient%20Descent.ipynb">Gradient Descent</a>
+</li>
+</ul>
+
+</section>
+<section id="sec-4-6" >
+
+<h3></h3>
 <p>
-<a href="http://localhost:8888/notebooks/Univariate%20Regression.ipynb">Univariate Regression</a>
-<a href="http://localhost:8888/notebooks/Sigmoid%20Example.ipynb">Sigmoid Function</a>
-<a href="http://localhost:8888/notebooks/Gradient%20Descent.ipynb">Gradient Descent</a>
+<a href="https://github.com/jupyter/nbgrader">nbgrader</a>
 </p>
 </section>
+
 
 </section>
 <section>
 <section id="sec-5" >
 
 <h2>IPython for Reserach</h2>
-</section>
-
-</section>
-<section>
-<section id="sec-6" >
-
-<h2>Examples</h2>
+<ul class="org-ul">
+<li>In conjunction with git/github data and analysis can be 
+</li>
+</ul>
 </section>
 </section>
 </div>
@@ -292,9 +382,9 @@ dependencies: [
  { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
  { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
  { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
  { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
- { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+
 ]
 });
 </script>
