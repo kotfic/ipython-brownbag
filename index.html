@@ -113,7 +113,7 @@ Dispite these
 
 <h3>Goals</h3>
 <p class="fragment roll-in">
-Talk about the petagological impact of these tools
+Talk about the pedagogical impact
 </p>
 
 <p class="fragment roll-in">
@@ -134,16 +134,83 @@ Evangelism
 <section id="sec-2" >
 
 <h2>What is Python and why should I care?</h2>
+<aside class="notes">
+<ul class="org-ul">
+<li>Probably know that Python is a programming language
+</li>
+</ul>
+</aside>
 </section>
 <section id="sec-2-1" >
 
-<h3>What <i>is</i> a programming language?</h3>
+<h3>So why should I care?</h3>
+
 </section>
 <section id="sec-2-2" >
 
-<h3>Compiled vs. Interpreted</h3>
+<h3>The Python Ecosystem</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Use</th>
+<th scope="col" class="left">Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">Web Scraping</td>
+<td class="left">requests, BeautifulSoup</td>
+</tr>
+
+<tr>
+<td class="left">Data Management</td>
+<td class="left">pandas</td>
+</tr>
+
+<tr>
+<td class="left">Statistics</td>
+<td class="left">statsmodels</td>
+</tr>
+
+<tr>
+<td class="left">Machine Learning</td>
+<td class="left">sklearn, theano</td>
+</tr>
+
+<tr>
+<td class="left">Visualization</td>
+<td class="left">matplotlib, seaborn</td>
+</tr>
+
+<tr>
+<td class="left">Analysis management</td>
+<td class="left">IPython</td>
+</tr>
+
+<tr>
+<td class="left">&#x2026;</td>
+<td class="left">&#x2026;</td>
+</tr>
+</tbody>
+</table>
+
 </section>
 <section id="sec-2-3" >
+
+<h3>What <i>is</i> a programming language?</h3>
+</section>
+<section id="sec-2-4" >
+
+<h3>Compiled vs. Interpreted</h3>
+</section>
+<section id="sec-2-5" >
 
 <h3>English</h3>
 <pre><code class="hljs text" trim-data>
@@ -160,7 +227,7 @@ algorithms in a target programming language.
 <a href="http://en.wikipedia.org/wiki/Computer_programming">http://en.wikipedia.org/wiki/Computer_programming</a>
 </div>
 </section>
-<section id="sec-2-4" >
+<section id="sec-2-6" >
 
 <h3>Code</h3>
 <pre><code class="hljs text" trim-data>
@@ -181,7 +248,7 @@ def launch_engines(n=4):
 </code></pre>
 
 </section>
-<section id="sec-2-5" >
+<section id="sec-2-7" >
 
 <h3>Machine Code</h3>
 <pre><code class="hljs text" trim-data>
@@ -200,17 +267,44 @@ def launch_engines(n=4):
 
 </code></pre>
 
-</section>
-<section id="sec-2-6" >
-
-<h3>So why should I care?</h3>
-</section>
-<section id="sec-2-7" >
-
-<h3>The Python Community</h3>
 
 </section>
 <section id="sec-2-8" >
+
+<h3>Compiling Code</h3>
+<img src="img/repl1.png" class="dot"/>
+</section>
+<section id="sec-2-9" >
+
+<h3>Executing Machine Code</h3>
+<img src="img/repl2.png" class="dot"/>
+</section>
+<section id="sec-2-10" >
+
+<h3>Python is a C program</h3>
+<img src="img/repl3.png" class="dot"/>
+
+</section>
+<section id="sec-2-11" >
+
+<h3>Interpreting Code</h3>
+<img src="img/repl4.png" class="dot"/>
+</section>
+<section id="sec-2-12" >
+
+<h3>Interpreters trade speed for flexability</h3>
+<p class="fragment roll-in">
+Interpreters are <b>slow</b>
+</p>
+<p class="fragment roll-in">
+Modern Computers are <b>fast</b>
+</p>
+<p class="fragment roll-in">
+Interpreters enable <b>REPLs</b>
+</p>
+
+</section>
+<section id="sec-2-13" >
 
 <h3>The Python REPL</h3>
 <ul class="org-ul">
@@ -223,6 +317,44 @@ def launch_engines(n=4):
 <li><b>L</b> oop
 </li>
 </ul>
+
+</section>
+<section id="sec-2-14" >
+
+<h3>Example</h3>
+<img src="img/basic-repl.gif" class="dot"/>
+
+</section>
+<section id="sec-2-15" >
+
+<h3>REPL</h3>
+<p>
+A REPL enables <b>exploritory</b> computing
+</p>
+
+</section>
+<section id="sec-2-16" >
+
+<h3></h3>
+<p>
+Stata, R, even SPSS use REPLs
+</p>
+
+</section>
+<section id="sec-2-17" >
+
+<h3>So why Python? (reprise)</h3>
+<p class="fragment roll-in">
+Statistics packages are like a key that opens a door
+</p>
+
+<p class="fragment roll-in">
+Python is like a key cutting machine
+</p>
+
+<p class="fragment roll-in">
+The <b>last</b> tool you'll ever need to learn
+</p>
 </section>
 
 </section>
@@ -234,8 +366,64 @@ def launch_engines(n=4):
 <section id="sec-3-1" >
 
 <h3>History</h3>
+<img src="img/fperez_headshot_lg.jpg" width="300px"/>
+
+
+<aside class="notes">
+<p>
+Inspired by Mathmatica and Maple
+</p>
+
+<p>
+Originally written back in 2001 when Perez was supposed to be writing his dissertation
+</p>
+</aside>
+
 </section>
 <section id="sec-3-2" >
+
+<h3>Example</h3>
+<img src="img/ipython-repl.gif" />
+
+</section>
+<section id="sec-3-3" >
+
+<h3>Improving the REPL</h3>
+<img src="img/ipython-repl2.gif" />
+
+
+
+</section>
+<section id="sec-3-4" >
+
+<h3>Client/Kernel Architecture</h3>
+<img src="img/repl5.png" class="dot"/>
+
+
+</section>
+<section id="sec-3-5" >
+
+<h3>Different Kinds of Clients</h3>
+<img src="img/repl6.png" class="dot"/>
+
+
+</section>
+<section id="sec-3-6" >
+
+<h3>QTConsole</h3>
+<img src="img/qtconsole.gif" class="dot"/>
+
+</section>
+<section id="sec-3-7" >
+
+<h3>The HTML Client</h3>
+<img src="img/repl6.png" class="dot"/>
+<p class="fragment roll-in">
+AKA The <b>IPython Notebook</b>
+</p>
+
+</section>
+<section id="sec-3-8" >
 
 <h3>IPython Notebook</h3>
 <ul class="org-ul">
@@ -247,11 +435,11 @@ def launch_engines(n=4):
 
 
 </section>
-<section id="sec-3-3" >
+<section id="sec-3-9" >
 
 <h3>Problems with the Notebook</h3>
 </section>
-<section id="sec-3-4" >
+<section id="sec-3-10" >
 
 <h3>Jupyter Project</h3>
 </section>
@@ -340,7 +528,6 @@ Matthew A. Russell - CTO Digital Reasoning ("cognitive computing")
 <a href="https://github.com/jupyter/nbgrader">nbgrader</a>
 </p>
 </section>
-
 
 </section>
 <section>
