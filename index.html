@@ -31,456 +31,466 @@
 <section>
 <section id="sec-1" >
 
-<h2>Objectives</h2>
-</section>
-<section id="sec-1-1" >
-
-<h3>Outline</h3>
-<ul class="org-ul">
-<li>Goals and Motivation
-</li>
-<li>What is Python and why should I care?
-</li>
-<li>What is IPython? and what is it becoming?
-</li>
-<li>IPython for Teaching
-</li>
-<li>IPython for Research
-</li>
-</ul>
-
+<h2>Context</h2>
 <aside class="notes">
 <p>
-Start with Goals and Motivation - tool talk,  not a research talk
+Tool talk -  not going to cover research really
 </p>
 
 <p>
-Incrementally zoom in on IPython  - start with Python
+Hopefully this will be mostly demonstrations
 </p>
 
 <p>
-contextualize IPython -  historically,  currently,  in the future
-</p>
-
-<p>
-pedagological impacts IPython could have for the INF undergraduates
-</p>
-
-<p>
-Using IPython to do reserach
+Before that thought I want to make sure we're on the same page
 </p>
 </aside>
 </section>
-<section id="sec-1-2" >
+<section id="sec-1-1" >
 
-<h3>Disclosure</h3>
-<p class="fragment roll-in">
-Not currently an instructor!
-</p>
-<p class="fragment roll-in">
-Arguably not currently a researcher!
-</p>
+<h3>Who am I?</h3>
 <aside class="notes">
 <p>
-Ideally talk about IPython for better petagogy and research
-Disclose first:
+Programming since I was 17.
 </p>
 
 <p>
-In academic context
-Never taught computer science,  Only taught basic computer skills
+CS undergraduate at RPI - 'raised' in a formal CS environment - O(n), balancing Red-Black trees, automata, translation look aside buffers for virtual memory all of it
 </p>
 
 <p>
-Arguably not currently a reserach -
-never won a grant
-never published work based on a personal research agenda
+started research in CogWorks lab at RPI - cognitive computation engineering,  eyetracking,  LISP programming on DARPA grant
 </p>
 
 <p>
-Dispite these
+Adjunct technology instructor overseas for a couple of years
+</p>
+
+<p>
+Was lead developer at local marking firm, web dev,  dev ops, sys admin
+</p>
+
+<p>
+Huge open source enthusiast
+</p>
+</aside>
+
+</section>
+<section id="sec-1-2" >
+
+<h3></h3>
+<img style="width:50%;" src="img/engineer_life.jpg" />
+
+<aside class="notes">
+<p>
+I bring this up because in a little bit i'm going to talk like IPython is the second comming
+</p>
+
+<p>
+I have some pretty strong personal biases
+</p>
+
+<p>
+Dewy style instrumentalism, problem oriented instead of knowledge oriented 
+</p>
+
+<p>
+quantitative, predictive, computational
+</p>
+
+<p>
+want to be upfront about those at the beginning
 </p>
 </aside>
 
 </section>
 <section id="sec-1-3" >
 
-<h3>Trust me,  I'm an Engineer</h3>
-<img src="./img/trust-me-im-an-engineer.jpg" alt="trust-me-im-an-engineer.jpg" />
-
-</section>
-<section id="sec-1-4" >
-
-<h3>Goals</h3>
-<p class="fragment roll-in">
-Talk about the pedagogical impact
-</p>
-
-<p class="fragment roll-in">
-Encourage you to invest in learing these tools
-</p>
-
-<p class="fragment roll-in">
-Hopefully at least one "Thats really cool."
-</p>
-
+<h3>Why this presentation?</h3>
 <p class="fragment roll-in">
 Evangelism
 </p>
+
+<p class="fragment roll-in">
+Opportunity
+</p>
+
+
+<aside class="notes">
+<p>
+So why this presentation?
+</p>
+
+<p>
+Zealous advocacy of a cause or doctrine, proselytizing zeal.
+</p>
+
+<p>
+I don't currently teach -  but I really think this tool belongs in the curriculum
+</p>
+
+<p>
+Want to bring this tool to your attention. 
+</p>
+
+<p>
+things that are changing right now that make this viable in the classroom instead of just a reserach lab
+</p>
+</aside>
 </section>
 
 </section>
 <section>
 <section id="sec-2" >
 
-<h2>What is Python and why should I care?</h2>
+<h2>Start at the End</h2>
 <aside class="notes">
-<ul class="org-ul">
-<li>Probably know that Python is a programming language
-</li>
-</ul>
+<p>
+Mei Chen - No overview slide
+</p>
+
+<p>
+Lead with conclusions
+</p>
 </aside>
 </section>
 <section id="sec-2-1" >
 
-<h3>So why should I care?</h3>
+<h3>Reduce the hassle</h3>
+<aside class="notes">
+</aside>
 
 </section>
 <section id="sec-2-2" >
 
-<h3>The Python Ecosystem</h3>
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="left" />
-
-<col  class="left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="left">Use</th>
-<th scope="col" class="left">Library</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="left">Web Scraping</td>
-<td class="left">requests, BeautifulSoup</td>
-</tr>
-
-<tr>
-<td class="left">Data Management</td>
-<td class="left">pandas</td>
-</tr>
-
-<tr>
-<td class="left">Statistics</td>
-<td class="left">statsmodels</td>
-</tr>
-
-<tr>
-<td class="left">Machine Learning</td>
-<td class="left">sklearn, theano</td>
-</tr>
-
-<tr>
-<td class="left">Visualization</td>
-<td class="left">matplotlib, seaborn</td>
-</tr>
-
-<tr>
-<td class="left">Analysis management</td>
-<td class="left">IPython</td>
-</tr>
-
-<tr>
-<td class="left">&#x2026;</td>
-<td class="left">&#x2026;</td>
-</tr>
-</tbody>
-</table>
-
+<h3>Tell stories with data</h3>
 </section>
 <section id="sec-2-3" >
 
-<h3>What <i>is</i> a programming language?</h3>
+<h3>Learn by <i>doing</i></h3>
 </section>
 <section id="sec-2-4" >
 
-<h3>Compiled vs. Interpreted</h3>
+<h3>(almost) Classroom Ready</h3>
 </section>
 <section id="sec-2-5" >
 
-<h3>English</h3>
-<pre><code class="hljs text" trim-data>
-Computer programming (often shortened to programming) is a process that 
-leads from an original formulation of a computing problem to executable 
-computer programs. Programming involves activities such as analysis, 
-developing understanding, generating algorithms, verification of 
-requirements of algorithms including their correctness and resource 
-consumption, and implementation (commonly referred to as coding) of 
-algorithms in a target programming language.
+<h3>Never hit a ceiling</h3>
+<aside class="notes">
+<p>
+A lot of research gets done with Microsoft Excel - don't want to disparage the program - but at some point you hit a wall with Excel
+</p>
 
-</code></pre>
-<div class='footnote'>
-<a href="http://en.wikipedia.org/wiki/Computer_programming">http://en.wikipedia.org/wiki/Computer_programming</a>
-</div>
+<p>
+Not really going to talk about research -  but the tools i want to show you are things I use every day
+</p>
+
+<p>
+I use IPython &amp; the notebook to tune paramaters by evaluating hundreds of thousands of statistical models on Reserach IT's cluster
+</p>
+</aside>
 </section>
 <section id="sec-2-6" >
 
-<h3>Code</h3>
-<pre><code class="hljs text" trim-data>
-@task
-def launch_engines(n=4):
-    env['pwd'] = os.getcwd()
-    env['n'] = n
-
-    with cd(env['pwd']):
-        run('echo "' + sbatch_script.format(**env) 
-            + '" > /tmp/ipengines_{user}.sh'.format(**env))
-        env['job_id'] = parse_job_id(
-            run("sbatch /tmp/ipengines_{user}.sh".format(**env)))
-        
-        with open(".job_id", "w") as fh:
-            fh.write(json.dumps(env))
-
-</code></pre>
+<h3></h3>
+<img src="img/plt.png" />
 
 </section>
 <section id="sec-2-7" >
 
-<h3>Machine Code</h3>
-<pre><code class="hljs text" trim-data>
-^W ^@h^C^@^@^@&lt;E9&gt;&lt;B0&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;%^B^W ^@h^D^@^@^@&lt;E9&gt;&lt;A0&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;
-&lt;FF&gt;%&lt;FA&gt;^V ^@h^E^@^@^@&lt;E9&gt;&lt;90&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;%&lt;F2&gt;^V ^@h^F^@^@^@&lt;E9&gt;&lt;80&gt;
-&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;%&lt;EA&gt;^V ^@h^G^@^@^@&lt;E9&gt;p&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;%&lt;E2&gt;^V ^@^@^@^@
-&lt;E9&gt;`&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;%&lt;DA&gt;^V ^@h   ^@^@^@&lt;E9&gt;P&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;AWAVAUATI&lt;89&gt;
-&lt;F5&gt;US&lt;8D&gt;_^AHc&lt;DB&gt;H&lt;83&gt;&lt;EC&gt;^XH&lt;C1&gt;&lt;E3&gt;^C&lt;89&gt;|$^DH&lt;89&gt;&lt;DF&gt;&lt;E8&gt;I&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;H&lt;89&gt;
-&lt;DF&gt;H&lt;89&gt;&lt;C5&gt;&lt;E8&gt;&gt;&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;H&lt;85&gt;&lt;C0&gt;H&lt;89&gt;&lt;C3&gt;^O&lt;84&gt;&lt;BC&gt;^@^@^@H&lt;85&gt;&lt;ED&gt;^O
-&lt;84&gt;&lt;B3&gt;^@^@^@1&lt;F6&gt;&lt;BF&gt;^F^@^@^@&lt;E8&gt;m&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;H&lt;89&gt;&lt;C7&gt;&lt;E8&gt;U&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;H&lt;85&gt;
-&lt;C0&gt;H&lt;89&gt;D^O&lt;84&gt;&lt;91&gt;^@^@^@H&lt;8D&gt;5^B^C^@^@&lt;BF&gt;^F^@^@^@&lt;E8&gt;F&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;&lt;8B&gt;D$^D
-&lt;85&gt;&lt;C0&gt;^O&lt;8E&gt;^T^A^@^@D&lt;8D&gt;`&lt;FF&gt;E1&lt;FF&gt;I&lt;83&gt;&lt;C4&gt;^A&lt;EB&gt;^R^O^_D^@^@J&lt;89&gt;^D&lt;FB&gt;I&lt;83&gt;
-&lt;C7&gt;^AM9&lt;E7&gt;t|K&lt;8B&gt;|&lt;FD&gt;^@1&lt;F6&gt;&lt;E8&gt;^_&lt;FF&gt;&lt;FF&gt;&lt;FF&gt;H&lt;85&gt;&lt;C0&gt;J&lt;89&gt;D&lt;FD&gt;^@u&lt;DD&gt;H
-&lt;8B&gt;|&lt;E8&gt;&lt;DB&gt;&lt;FE&gt;&lt;FF&gt;&lt;FF&gt;H&lt;8B&gt;^E&lt;9C&gt;^U ^@A&lt;8D&gt;O^AH&lt;8D&gt;^U&lt;A1&gt;^B^@^@&lt;BE&gt;^A^@^@^@H
-&lt;8B&gt;81&lt;C0&gt;&lt;E8&gt;
+<h3>Graph generated in python of course</h3>
+<div class="org-src-container">
 
-</code></pre>
+<pre  class="src src-python"><span style="color: #99cc99;">from</span> matplotlib <span style="color: #99cc99;">import</span> pyplot <span style="color: #99cc99;">as</span> plt
+<span style="color: #99cc99;">import</span> math
+<span style="color: #99cc99;">import</span> os
 
+<span style="color: #ffcc66;">pts</span> = <span style="color: #cc99cc;">range</span>(1,100)
 
-</section>
-<section id="sec-2-8" >
+plt.plot(pts, [n**2.3 <span style="color: #99cc99;">for</span> n <span style="color: #99cc99;">in</span> <span style="color: #cc99cc;">range</span>(1,100)], label=<span style="color: #66cccc;">"Python &amp; IPython"</span>)
+plt.plot(pts, [400 * math.log(n) <span style="color: #99cc99;">for</span> n <span style="color: #99cc99;">in</span> pts], label=<span style="color: #66cccc;">"Most other tools"</span>) 
 
-<h3>Compiling Code</h3>
-<img src="img/repl1.png" class="dot"/>
-</section>
-<section id="sec-2-9" >
+plt.legend(loc=2)
+plt.ylim([0,10000])
+plt.xlabel(<span style="color: #66cccc;">"Investment"</span>)
+plt.ylabel(<span style="color: #66cccc;">"Capabilities"</span>)
 
-<h3>Executing Machine Code</h3>
-<img src="img/repl2.png" class="dot"/>
-</section>
-<section id="sec-2-10" >
-
-<h3>Python is a C program</h3>
-<img src="img/repl3.png" class="dot"/>
-
-</section>
-<section id="sec-2-11" >
-
-<h3>Interpreting Code</h3>
-<img src="img/repl4.png" class="dot"/>
-</section>
-<section id="sec-2-12" >
-
-<h3>Interpreters trade speed for flexability</h3>
-<p class="fragment roll-in">
-Interpreters are <b>slow</b>
-</p>
-<p class="fragment roll-in">
-Modern Computers are <b>fast</b>
-</p>
-<p class="fragment roll-in">
-Interpreters enable <b>REPLs</b>
-</p>
-
-</section>
-<section id="sec-2-13" >
-
-<h3>The Python REPL</h3>
-<ul class="org-ul">
-<li><b>R</b> ead
-</li>
-<li><b>E</b> valuate
-</li>
-<li><b>P</b> rint
-</li>
-<li><b>L</b> oop
-</li>
-</ul>
-
-</section>
-<section id="sec-2-14" >
-
-<h3>Example</h3>
-<img src="img/basic-repl.gif" class="dot"/>
-
-</section>
-<section id="sec-2-15" >
-
-<h3>REPL</h3>
-<p>
-A REPL enables <b>exploritory</b> computing
-</p>
-
-</section>
-<section id="sec-2-16" >
-
-<h3></h3>
-<p>
-Stata, R, even SPSS use REPLs
-</p>
-
-</section>
-<section id="sec-2-17" >
-
-<h3>So why Python? (reprise)</h3>
-<p class="fragment roll-in">
-Statistics packages are like a key that opens a door
-</p>
-
-<p class="fragment roll-in">
-Python is like a key cutting machine
-</p>
-
-<p class="fragment roll-in">
-The <b>last</b> tool you'll ever need to learn
-</p>
+plt.title(<span style="color: #66cccc;">"Investment vs. Capabilities"</span>)
+plt.savefig(os.getcwd() + <span style="color: #66cccc;">"/.publication/ipython-brownbag/img/plt.png"</span>)
+</pre>
+</div>
 </section>
 
 </section>
 <section>
 <section id="sec-3" >
 
-<h2>What is IPython? and what is it becoming?</h2>
+<h2>Framing the problem</h2>
 </section>
 <section id="sec-3-1" >
 
-<h3>History</h3>
-<img src="img/fperez_headshot_lg.jpg" width="300px"/>
-
+<h3>Programming is hard</h3>
+<p class="fragment roll-in">
+FALSE!
+</p>
 
 <aside class="notes">
 <p>
-Inspired by Mathmatica and Maple
+Programming is hard [click]
 </p>
 
 <p>
-Originally written back in 2001 when Perez was supposed to be writing his dissertation
+False!  
+</p>
+
+<p>
+Want to argue that this is a myth - 
+</p>
+
+<p>
+we give and recieve complex directions <i>all</i> the time. 
 </p>
 </aside>
-
 </section>
 <section id="sec-3-2" >
 
-<h3>Example</h3>
-<img src="img/ipython-repl.gif" />
+<h3>Engagement</h3>
+<aside class="notes">
+<p>
+When we're really engaged with a topic or a project we can coordinate and execute complex plans of action
+</p>
+
+<p>
+Ask an undergrad about coordinating a raid in League of Legends 
+</p>
+
+<p>
+or what they need to get on their final to not fail the class
+</p>
+</aside>
+
 
 </section>
 <section id="sec-3-3" >
 
-<h3>Improving the REPL</h3>
-<img src="img/ipython-repl2.gif" />
-
+<h3>What are the roadblocks to engaged programming?</h3>
 
 
 </section>
 <section id="sec-3-4" >
 
-<h3>Client/Kernel Architecture</h3>
-<img src="img/repl5.png" class="dot"/>
-
+<h3>Feeling overwhelmed</h3>
+<p class="fragment roll-in">
+where to start?
+</p>
 
 </section>
 <section id="sec-3-5" >
 
-<h3>Different Kinds of Clients</h3>
-<img src="img/repl6.png" class="dot"/>
-
-
+<h3>Cognitive overload</h3>
+<p class="fragment roll-in">
+wait where am I?
+</p>
 </section>
 <section id="sec-3-6" >
 
-<h3>QTConsole</h3>
-<img src="img/qtconsole.gif" class="dot"/>
-
+<h3>lack of eary success</h3>
 </section>
 <section id="sec-3-7" >
 
-<h3>The HTML Client</h3>
-<img src="img/repl6.png" class="dot"/>
-<p class="fragment roll-in">
-AKA The <b>IPython Notebook</b>
-</p>
+<h3>lack of empowerment</h3>
+<aside class="notes">
+</aside>
 
 </section>
 <section id="sec-3-8" >
 
-<h3>IPython Notebook</h3>
-<ul class="org-ul">
-<li>notebooks are just JSON files
-</li>
-<li>can be version controlled
-</li>
-</ul>
+<h3>Programming <i>is</i> hard</h3>
+<p class="fragment roll-in">
+for students it shouldn't have to <i>start</i> hard
+</p>
 
+<aside class="notes">
+</aside>
 
 </section>
 <section id="sec-3-9" >
 
-<h3>Problems with the Notebook</h3>
+<h3>Programming is hard for faculty</h3>
+<aside class="notes">
+<p>
+Programming also hard for faculty - 
+</p>
+
+<p>
+Doubt anyone here disagrees that programming is importaint for students
+</p>
+
+<p>
+From a pedagalogical perspective there is a barrier to entry
+</p>
+
+<p>
+How much time am I going to take?  what is going to be the payoff of including programming?
+</p>
+</aside>
+
 </section>
 <section id="sec-3-10" >
 
-<h3>Jupyter Project</h3>
+<h3>Programming Environments</h3>
+<aside class="notes">
+<p>
+ITS provided programming environments insufficient
+</p>
+
+<p>
+Stuck with putty and an amazon server -  or laptops and dozens of different installs
+</p>
+
+<p>
+Making sure the libraries are correctly installed
+</p>
+
+<p>
+SSH and command line are scary the first time (usually scary the second time too)
+</p>
+</aside>
+
+</section>
+<section id="sec-3-11" >
+
+<h3>Scalability</h3>
+<aside class="notes">
+<p>
+Manageable problems with a class of 25 or 30. How do I handle 1100 students and they're problems?
+</p>
+
+<p>
+Faculty are faculty - they shouldn't also have to be system administrators
+</p>
+</aside>
+
+</section>
+<section id="sec-3-12" >
+
+<h3>Getting students to "<i>Wow&#x2026;</i>"</h3>
+<aside class="notes">
+<p>
+All these stand in the way of getting to <i>wow</i> as quickly as possible
+</p>
+
+<p>
+getting to that engaging empowered experience
+</p>
+
+<p>
+capable of solving a problem i couldn't solve before
+</p>
+
+<p>
+seeing the world in a different way - fully self-actualized digital citizenship
+</p>
+
+<p>
+if you want to convince someone that programming is worth their time you need to get them to <i>wow</i> quickly
+</p>
+</aside>
 </section>
 
 </section>
 <section>
 <section id="sec-4" >
 
-<h2>IPython for Teaching</h2>
+<h2>IPython Notebook</h2>
 </section>
 <section id="sec-4-1" >
 
-<h3>Direct impact</h3>
-<ul class="org-ul">
-<li>Student: Only need a browser and an internet connection
-</li>
-<li>Instructor:  Only need to setup/install a single instance
-</li>
-</ul>
+<h3>History</h3>
 
 </section>
 <section id="sec-4-2" >
 
-<h3>Literate Programming</h3>
-<ul class="org-ul">
-<li>Donald Knuth Quotes
-</li>
-<li>Markdown &amp; Code together
-</li>
-</ul>
+<h3>The Python REPL</h3>
+<img src="img/basic-repl.gif" class="dot"/>
 
 </section>
 <section id="sec-4-3" >
 
-<h3>NBViewer</h3>
-<p>
-An <a href="https://github.com/kotfic/PNAS_hurricanes">example</a> using <a href="http://nbviewer.ipython.org/">nbviewer</a> 
-</p>
+<h3>The IPython REPL</h3>
+<img src="img/ipython-repl.gif" />
 
 </section>
 <section id="sec-4-4" >
+
+<h3>Improving the REPL by ignoring your dissertation</h3>
+<img src="img/ipython-repl2.gif" />
+
+
+</section>
+<section id="sec-4-5" >
+
+<h3>Client/Kernel Architecture</h3>
+<img src="img/repl5.png" class="dot"/>
+
+</section>
+<section id="sec-4-6" >
+
+<h3>Different Kinds of Clients</h3>
+<img src="img/repl6.png" class="dot"/>
+
+
+
+</section>
+<section id="sec-4-7" >
+
+<h3>The Power of Client/Kernel Architecture</h3>
+<img src="img/repl8.png" class="dot"/>
+
+</section>
+<section id="sec-4-8" >
+
+<h3></h3>
+<img src="https://i.imgflip.com/hskmc.jpg" width="690px"/>
+
+</section>
+<section id="sec-4-9" >
+
+<h3>Live Coding</h3>
+<p>
+(almost always a bad idea)
+</p>
+<p class="fragment roll-in">
+Lets do it anyways! 
+</p>
+<p class="fragment roll-in">
+An <a href="http://127.0.0.1:8888">Example</a> Notebook Server
+</p>
+
+<aside class="notes">
+<p>
+Do scratch notebook - hello world,  basic explination of interface
+</p>
+
+<p>
+Do Lotto example as something a little more interesting
+</p>
+
+<p>
+Do Markdown - talk about markdown
+</p>
+
+<p>
+Do Rich Display - walk through rich display notebook quickly
+</p>
+
+<p>
+Back to slides
+</p>
+</aside>
+
+</section>
+<section id="sec-4-10" >
 
 <h3>Blogging, Tutorials and Books</h3>
 <ul class="org-ul">
@@ -508,7 +518,31 @@ Matthew A. Russell - CTO Digital Reasoning ("cognitive computing")
 </aside>
 
 </section>
-<section id="sec-4-5" >
+<section id="sec-4-11" >
+
+<h3>NBViewer</h3>
+<p>
+An <a href="https://github.com/kotfic/PNAS_hurricanes">example</a> using <a href="http://nbviewer.ipython.org/">nbviewer</a> 
+</p>
+
+<aside class="notes">
+<p>
+Notebooks are jus JSON - can be version controlled, can be shared via github
+</p>
+
+<p>
+Then clone github repo - don't forget to clear output
+</p>
+</aside>
+</section>
+
+</section>
+<section>
+<section id="sec-5" >
+
+<h2>Learn by <i>doing</i></h2>
+</section>
+<section id="sec-5-1" >
 
 <h3>Widgets &amp; Simulation</h3>
 <ul class="org-ul">
@@ -519,24 +553,156 @@ Matthew A. Russell - CTO Digital Reasoning ("cognitive computing")
 <li><a href="http://localhost:8888/notebooks/Gradient%20Descent.ipynb">Gradient Descent</a>
 </li>
 </ul>
-
-</section>
-<section id="sec-4-6" >
-
-<h3></h3>
-<p>
-<a href="https://github.com/jupyter/nbgrader">nbgrader</a>
-</p>
 </section>
 
 </section>
 <section>
-<section id="sec-5" >
+<section id="sec-6" >
 
-<h2>IPython for Reserach</h2>
+<h2>What does "Almost" classroom ready mean?</h2>
+</section>
+<section id="sec-6-1" >
+
+<h3>IPython's Roots</h3>
+<aside class="notes">
+<p>
+IPython notebook really scientific notebook
+</p>
+
+<p>
+Designed to be used on local computer,  or on remote computer but by one or a few trusted users
+</p>
+
+<p>
+Not really secure - not really designed for a classroom setting
+</p>
+</aside>
+</section>
+<section id="sec-6-2" >
+
+<h3>Project Jupytr</h3>
+<p>
+<a href="http://tmpnb.org">tmpnb.org</a>
+</p>
+<aside class="notes">
+<p>
+Project Jupytr is the evolution of IPython notebook (last 6 to 12 months)
+</p>
+
+<p>
+Different name because its not just a Python notebook anymore - also does R, Julia and a few others
+</p>
+
+<p>
+Extends the Client/Kernel architecture
+</p>
+
+<p>
+Also adds system level authentication,  your notebook runs inside a virtualized container as your user
+</p>
+
+<p>
+No access to other user's notebooks,  containment incase of accidents (better resource allocation)
+</p>
+
+<p>
+Its ready - "Almost" just means this is cutting edge (Informatics history of being a pilot program)
+</p>
+</aside>
+
+</section>
+<section id="sec-6-3" >
+
+<h3>Jupytr is happening <i>right now</i></h3>
+<p>
+<a href="https://github.com/jupyter">https://github.com/jupyter</a>
+</p>
+<aside class="notes">
+</aside>
+</section>
+
+
+</section>
+<section>
+<section id="sec-7" >
+
+<h2>Solving the problem</h2>
+</section>
+<section id="sec-7-1" >
+
+<h3>Direct Impact?</h3>
+
+</section>
+<section id="sec-7-2" >
+
+<h3>Student</h3>
+<p>
+Browser and an internet connection
+</p>
+</section>
+<section id="sec-7-3" >
+
+<h3>Instructor</h3>
+<p>
+Only need to setup/install a single instance
+</p>
+
+</section>
+<section id="sec-7-4" >
+
+<h3>Spheres of Responsibility</h3>
+<img src="img/repl9.png" class="dot"/>
+
+
+
+</section>
+<section id="sec-7-5" >
+
+<h3>Amason, ITS and EIS</h3>
+</section>
+</section>
+<section>
+<section id="sec-8" >
+
+<h2>Program or be Programmed</h2>
+<aside class="notes">
+<p>
+Douglas Rushkoff - 2010
+</p>
+
+<p>
+Not suggesting everyone should be a software engineer
+</p>
+
+<p>
+About de-mystifying the technologies - teaching people they can have control over their digital lives
+</p>
+
+<p>
+There are people out there who are making choices about the face of our digital landscapes 
+</p>
+
+<p>
+We can choose to participate in that conversation - or let others make choices for us.
+</p>
+</aside>
+</section>
+
+</section>
+<section>
+<section id="sec-9" >
+
+<h2>Links etc</h2>
 <ul class="org-ul">
-<li>In conjunction with git/github data and analysis can be 
+<li><a href="http://ipython.org/">IPython</a>
 </li>
+<li><a href="http://jupyter.org/">Jupyter</a>
+</li>
+<li><a href="http://software-carpentry.org/">Software Carpentry</a>
+</li>
+<li><i>tmpnb</i>
+</li>
+<li></li>
 </ul>
 </section>
 </section>
